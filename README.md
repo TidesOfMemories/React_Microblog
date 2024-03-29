@@ -1,6 +1,7 @@
 ## Overview
 
 A microblog project that helps me learn the frontend tech stack.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
