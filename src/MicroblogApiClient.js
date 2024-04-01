@@ -2,6 +2,7 @@ const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
 export default class MicroblogApiClient {
   constructor() {
+    // The base URL is configured in ../.env as "localhost:5000"
     this.base_url = BASE_API_URL + "/api";
   }
 
