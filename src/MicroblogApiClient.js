@@ -2,7 +2,7 @@ const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
 export default class MicroblogApiClient {
   constructor() {
-    this.base_url = BASE_API_URL + "api";
+    this.base_url = BASE_API_URL + "/api";
   }
 
   async request(options) {
@@ -13,7 +13,7 @@ export default class MicroblogApiClient {
 
     let response;
     try {
-      response = await fetch(this.base_url + options.rul + query, {
+      response = await fetch(this.base_url + options.url + query, {
         method: options.method,
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export default class MicroblogApiClient {
     return {
       ok: response.ok,
       status: response.status,
-      body: response.status != 204 ? await response.json() : null,
+      body: response.status !== 204 ? await response.json() : null,
     };
   }
 

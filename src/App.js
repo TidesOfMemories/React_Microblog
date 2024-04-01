@@ -4,8 +4,8 @@ import ApiProvider from "./contexts/ApiProvider";
 import Header from "./components/Header";
 import FeedPage from "./pages/FeedPage";
 import ExplorePage from "./pages/ExplorePage";
-import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
+import LoginPage from "./pages/LoginPage";
 
 export default function App() {
   return (

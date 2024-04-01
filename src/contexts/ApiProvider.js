@@ -1,18 +1,14 @@
 import { createContext, useContext } from "react";
-import MicroblogApiClient from '../MicroblogApiClient';
+import MicroblogApiClient from "../MicroblogApiClient";
 
 const ApiContext = createContext();
 
 export default function ApiProvider({ children }) {
-    const api = new MicroblogApiClient();
+  const api = new MicroblogApiClient();
 
-    return (
-        <ApiContext.Provider value={api}>
-            {children}
-        </ApiContext.Provider>
-    );
+  return <ApiContext.Provider value={api}>{children}</ApiContext.Provider>;
 }
 
-export function userApi() {
-    return useContext(ApiContext)
+export function useApi() {
+  return useContext(ApiContext);
 }
